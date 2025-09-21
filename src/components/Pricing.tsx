@@ -4,87 +4,67 @@ import { Check, Star, Zap, Crown } from "lucide-react";
 const Pricing = () => {
   const plans = [
     {
-      name: "Gratis",
-      price: "0",
-      period: "por siempre",
-      description: "Perfecto para restaurantes pequeños que quieren probar la IA",
+      name: "Básico",
+      price: "299",
+      period: "por mes",
+      description: "Automatizaciones esenciales para negocios que inician con IA",
       icon: Star,
       features: [
-        "Hasta 50 pedidos por mes",
-        "Gestión básica de reservas",
+        "Chatbot básico",
+        "Automatización de leads",
+        "Dashboard de métricas",
         "Soporte por email",
-        "Dashboard básico",
         "1 usuario"
       ],
       limitations: [
-        "Sin análisis predictivo",
+        "Sin IA personalizada",
         "Sin integraciones avanzadas"
       ],
       popular: false,
-      cta: "Empezar gratis"
+      cta: "Comenzar ahora"
     },
     {
-      name: "Pro",
-      price: "99",
+      name: "Crecimiento",
+      price: "699",
       period: "por mes",
-      description: "Ideal para restaurantes establecidos que buscan optimizar operaciones",
+      description: "Gerente de Restaurante IA + marketing inteligente para negocios en expansión",
       icon: Zap,
       features: [
-        "Pedidos ilimitados",
-        "Gestión completa de inventario",
-        "Análisis predictivo básico",
-        "Programación automática de turnos",
+        "Gerente de Restaurante IA completo",
+        "Marketing con IA",
+        "Automatización de procesos",
+        "Análisis predictivo",
         "Hasta 5 usuarios",
         "Soporte prioritario",
-        "Integraciones con POS"
+        "Integraciones múltiples"
       ],
       limitations: [],
       popular: true,
       cta: "Probar 14 días gratis"
     },
     {
-      name: "Restaurante Plus",
-      price: "199",
+      name: "Premium",
+      price: "1299",
       period: "por mes",
-      description: "Para restaurantes grandes con múltiples áreas y necesidades complejas",
+      description: "Automatización total con soporte dedicado para negocios establecidos",
       icon: Crown,
       features: [
-        "Todo lo de Pro +",
-        "Análisis predictivo avanzado",
-        "Gestión multi-ubicación",
-        "IA personalizada",
+        "Todo lo de Crecimiento +",
+        "IA 100% personalizada",
+        "Consultoría estratégica",
         "Usuarios ilimitados",
         "Soporte 24/7",
-        "Consultoría mensual",
-        "API personalizada"
+        "Gerente de cuenta",
+        "Desarrollo a medida"
       ],
       limitations: [],
       popular: false,
       cta: "Contactar ventas"
-    },
-    {
-      name: "Corporativo",
-      price: "Personalizado",
-      period: "según necesidades",
-      description: "Solución empresarial para cadenas y franquicias",
-      icon: Crown,
-      features: [
-        "Todo lo de Restaurante Plus +",
-        "Desarrollo personalizado",
-        "Integración empresarial",
-        "Gerente de cuenta dedicado",
-        "SLA garantizado",
-        "Capacitación on-site",
-        "Reportes ejecutivos"
-      ],
-      limitations: [],
-      popular: false,
-      cta: "Hablar con experto"
     }
   ];
 
   return (
-    <section id="precios" className="py-20">
+    <section id="planes" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">

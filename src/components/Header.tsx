@@ -7,10 +7,10 @@ const Header = () => {
 
   const navItems = [
     { name: "Inicio", href: "#inicio" },
-    { name: "Cómo Funciona", href: "#como-funciona" },
-    { name: "Beneficios", href: "#beneficios" },
-    { name: "Casos de Uso", href: "#casos-uso" },
-    { name: "Precios", href: "#precios" },
+    { name: "Servicios", href: "#servicios" },
+    { name: "Casos de Éxito", href: "#casos-exito" },
+    { name: "Planes", href: "#planes" },
+    { name: "FAQs", href: "#faqs" },
     { name: "Contacto", href: "#contacto" },
   ];
 
@@ -20,12 +20,12 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-              <span className="text-xl font-bold text-primary-foreground">AI</span>
+            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+              <span className="text-xl font-bold text-primary-foreground">M</span>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-foreground">AI Restaurant</h1>
-              <p className="text-sm text-muted-foreground -mt-1">Manager</p>
+              <h1 className="text-xl font-bold text-foreground">The Manager</h1>
+              <p className="text-sm text-muted-foreground -mt-1">IA</p>
             </div>
           </div>
 
@@ -44,8 +44,8 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex">
-            <Button className="bg-primary hover:bg-accent text-primary-foreground font-semibold">
-              Probar Gratis
+            <Button className="bg-primary hover:bg-secondary hover:text-foreground text-primary-foreground font-semibold border-2 border-primary hover:border-primary">
+              Agenda una Demo
             </Button>
           </div>
 

@@ -4,47 +4,47 @@ const UseCases = () => {
   const cases = [
     {
       icon: Clock,
-      title: "Gestión de pedidos automatizada",
-      description: "El agente IA procesa pedidos en tiempo real, coordina con la cocina y optimiza tiempos de entrega. Reduce errores y mejora la experiencia del cliente.",
+      title: "Agente IA Gerente de Restaurante",
+      description: "Nuestro caso estrella: un agente inteligente que gestiona reservas, inventario y pedidos en tiempo real. Transformó completamente las operaciones de 'Sabores del Puerto'.",
       image: "/api/placeholder/600/400",
-      stats: ["50% menos errores", "30% más rápido", "100% automatizado"],
-      reverse: false
-    },
-    {
-      icon: Users,
-      title: "Optimización de turnos de personal",
-      description: "Programa automáticamente los turnos basándose en patrones de demanda, disponibilidad del personal y eventos especiales. Maximiza eficiencia y reduce costos laborales.",
-      image: "/api/placeholder/600/400",
-      stats: ["25% menos sobrecostos", "95% satisfacción staff", "Predicción inteligente"],
-      reverse: true
-    },
-    {
-      icon: Package,
-      title: "Control de inventario inteligente",
-      description: "Monitorea stock en tiempo real, predice necesidades futuras y genera órdenes automáticas. Evita desperdicios y garantiza disponibilidad de ingredientes.",
-      image: "/api/placeholder/600/400",
-      stats: ["40% menos desperdicio", "Alertas proactivas", "ROI optimizado"],
+      stats: ["+30% eficiencia operativa", "-20% errores inventario", "24/7 disponibilidad"],
       reverse: false
     },
     {
       icon: TrendingUp,
-      title: "Análisis predictivo de demanda",
-      description: "Analiza patrones históricos, clima, eventos locales y tendencias para predecir la demanda. Ayuda a planificar menús, personal e inventario.",
+      title: "Marketing Digital con IA",
+      description: "Automatización completa del marketing digital para 'TechSolutions Inc'. Segmentación inteligente, campañas personalizadas y optimización automática de conversiones.",
       image: "/api/placeholder/600/400",
-      stats: ["85% precisión", "Planificación automática", "Insights accionables"],
+      stats: ["+150% leads generados", "+85% tasa conversión", "-40% costo adquisición"],
+      reverse: true
+    },
+    {
+      icon: Users,
+      title: "Atención al Cliente Automatizada",
+      description: "Implementación de chatbot inteligente para 'RetailPlus'. Atiende consultas 24/7, procesa devoluciones y deriva casos complejos al equipo humano cuando es necesario.",
+      image: "/api/placeholder/600/400",
+      stats: ["95% consultas resueltas", "-60% tiempo respuesta", "24/7 disponibilidad"],
+      reverse: false
+    },
+    {
+      icon: Package,
+      title: "Automatización de Procesos Empresariales",
+      description: "Transformación digital completa para 'LogisticPro': automatización de facturación, gestión de inventario y seguimiento de entregas con IA predictiva.",
+      image: "/api/placeholder/600/400",
+      stats: ["-70% tiempo procesos", "+99% precisión datos", "ROI 300%"],
       reverse: true
     }
   ];
 
   return (
-    <section id="casos-uso" className="py-20">
+    <section id="casos-exito" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Casos de uso reales
+            Casos de Éxito
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Descubre cómo nuestra IA transforma cada aspecto de tu restaurante
+            Historias reales de transformación con nuestras soluciones de IA
           </p>
         </div>
 

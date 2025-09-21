@@ -10,51 +10,51 @@ const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
-                El gerente de restaurante{" "}
+                Tu Gerente de Restaurante{" "}
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  más eficiente...
+                  en Inteligencia
                 </span>{" "}
-                es tu IA
+                Artificial
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
-                Optimiza tu negocio gastronómico con un agente inteligente que organiza 
-                reservas, pedidos y personal automáticamente.
+                Automatiza reservas, pedidos, inventario y atención al cliente con IA. 
+                Soluciones inteligentes para negocios modernos.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
-                className="bg-primary hover:bg-accent text-primary-foreground font-semibold text-lg px-8 py-6 shadow-[var(--shadow-glow)]"
+                className="bg-primary hover:bg-secondary hover:text-foreground text-primary-foreground font-semibold text-lg px-8 py-6 shadow-[var(--shadow-glow)] border-2 border-primary hover:border-primary"
               >
-                Solicitar Demo
+                Agenda una Demo
                 <ArrowRight className="ml-2" size={20} />
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-border hover:bg-secondary text-foreground font-semibold text-lg px-8 py-6"
+                className="border-border hover:bg-muted text-foreground font-semibold text-lg px-8 py-6"
               >
                 <Play className="mr-2" size={20} />
-                Ver Cómo Funciona
+                Ver en Acción
               </Button>
             </div>
 
             {/* Trust indicators */}
             <div className="flex items-center space-x-6 pt-8">
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">500+</div>
-                <div className="text-sm text-muted-foreground">Restaurantes</div>
+                <div className="text-2xl font-bold text-primary">200+</div>
+                <div className="text-sm text-muted-foreground">Negocios</div>
               </div>
               <div className="w-px h-12 bg-border"></div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary">98%</div>
-                <div className="text-sm text-muted-foreground">Satisfacción</div>
+                <div className="text-2xl font-bold text-primary">95%</div>
+                <div className="text-sm text-muted-foreground">Automatización</div>
               </div>
               <div className="w-px h-12 bg-border"></div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-primary">24/7</div>
-                <div className="text-sm text-muted-foreground">Disponible</div>
+                <div className="text-sm text-muted-foreground">Soporte</div>
               </div>
             </div>
           </div>
@@ -65,7 +65,7 @@ const Hero = () => {
               <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl flex items-center justify-center">
                 <div className="text-center space-y-4">
                   <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto animate-pulse">
-                    <span className="text-2xl font-bold text-primary-foreground">IA</span>
+                    <span className="text-2xl font-bold text-primary-foreground">M</span>
                   </div>
                   <div className="space-y-2">
                     <div className="h-3 bg-primary/30 rounded w-32 mx-auto"></div>
