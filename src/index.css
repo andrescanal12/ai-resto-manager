@@ -9,7 +9,7 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* The Manager IA Brand Colors */
-    --background: 210 40% 98%;           /* #F8FAFC - Light background */
+    --background: 0 10% 90%;            /* #E8E3E3 - Global light background */
     --foreground: 222 84% 5%;            /* #0F172A - Dark text */
 
     --card: 0 0% 100%;                   /* #FFFFFF - White card background */

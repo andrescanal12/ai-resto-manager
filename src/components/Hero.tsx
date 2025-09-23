@@ -62,17 +62,15 @@ const Hero = () => {
           {/* Visual */}
           <div className="relative">
             <div className="relative bg-gradient-to-br from-card to-secondary rounded-2xl p-8 shadow-[var(--shadow-card)]">
-              <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto animate-pulse">
-                    <span className="text-2xl font-bold text-primary-foreground">M</span>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="h-3 bg-primary/30 rounded w-32 mx-auto"></div>
-                    <div className="h-3 bg-accent/30 rounded w-24 mx-auto"></div>
-                    <div className="h-3 bg-primary/30 rounded w-20 mx-auto"></div>
-                  </div>
-                </div>
+              <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl overflow-hidden">
+                <video
+                  src="/video_agente.mp4"
+                  className="w-full h-full object-cover rounded-xl"
+                  loop
+                  autoPlay
+                  muted
+                  playsInline
+                />
               </div>
             </div>
             
