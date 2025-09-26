@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,15 +32,32 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-              >
-                {item.name}
-              </a>
-            ))}
+            {/* Inicio */}
+            <Link
+              to="/"
+              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+            >
+              Inicio
+            </Link>
+            {/* Automatización IA */}
+            <Link
+              to="/automatizacion-ia"
+              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+            >
+              Automatización IA
+            </Link>
+            {/* Rest of items excluding Inicio */}
+            {navItems
+              .filter((item) => item.name !== "Inicio")
+              .map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                >
+                  {item.name}
+                </a>
+              ))}
           </div>
 
           {/* CTA Button */}
@@ -62,16 +80,35 @@ const Header = () => {
         {isMenuOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-border">
             <div className="flex flex-col space-y-4 pt-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
-              ))}
+              {/* Inicio */}
+              <Link
+                to="/"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Inicio
+              </Link>
+              {/* Automatización IA */}
+              <Link
+                to="/automatizacion-ia"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Automatización IA
+              </Link>
+              {/* Rest of items excluding Inicio */}
+              {navItems
+                .filter((item) => item.name !== "Inicio")
+                .map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                ))}
               <Button className="bg-primary hover:bg-accent text-primary-foreground font-semibold w-full mt-4">
                 Probar Gratis
               </Button>
