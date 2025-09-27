@@ -1,0 +1,186 @@
+import { Button } from "@/components/ui/button";
+import { Check, Star, Zap, Crown } from "lucide-react";
+
+const Pricing = () => {
+  const plans = [
+    {
+      name: "Básico",
+      price: "299",
+      period: "por mes",
+      description: "Automatizaciones esenciales para negocios que inician con IA",
+      icon: Star,
+      features: [
+        "Chatbot básico",
+        "Automatización de leads",
+        "Dashboard de métricas",
+        "Soporte por email",
+        "1 usuario"
+      ],
+      limitations: [
+        "Sin IA personalizada",
+        "Sin integraciones avanzadas"
+      ],
+      popular: false,
+      cta: "Comenzar ahora"
+    },
+    {
+      name: "Crecimiento",
+      price: "699",
+      period: "por mes",
+      description: "Gerente de Restaurante IA + marketing inteligente para negocios en expansión",
+      icon: Zap,
+      features: [
+        "Gerente de Restaurante IA completo",
+        "Marketing con IA",
+        "Automatización de procesos",
+        "Análisis predictivo",
+        "Hasta 5 usuarios",
+        "Soporte prioritario",
+        "Integraciones múltiples"
+      ],
+      limitations: [],
+      popular: true,
+      cta: "Probar 14 días gratis"
+    },
+    {
+      name: "Premium",
+      price: "1299",
+      period: "por mes",
+      description: "Automatización total con soporte dedicado para negocios establecidos",
+      icon: Crown,
+      features: [
+        "Todo lo de Crecimiento +",
+        "IA 100% personalizada",
+        "Consultoría estratégica",
+        "Usuarios ilimitados",
+        "Soporte 24/7",
+        "Gerente de cuenta",
+        "Desarrollo a medida"
+      ],
+      limitations: [],
+      popular: false,
+      cta: "Contactar ventas"
+    }
+  ];
+
+  return (
+    <section id="planes" className="py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
+            Planes que se adaptan a tu restaurante
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+            Desde restaurantes pequeños hasta grandes cadenas, tenemos la solución perfecta
+          </p>
+          
+          {/* Guarantee badge */}
+          <div className="inline-flex items-center space-x-2 bg-primary/10 border border-primary/30 rounded-full px-6 py-3">
+            <Check className="w-5 h-5 text-primary" />
+            <span className="text-primary font-semibold">Garantía de satisfacción 30 días</span>
+          </div>
+        </div>
+
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center mx-auto max-w-6xl">
+          {plans.map((plan, index) => {
+            const IconComponent = plan.icon;
+            return (
+              <div 
+                key={index} 
+                className={`relative bg-card border rounded-2xl p-8 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-glow)] transition-all duration-300 ${
+                  plan.popular ? 'border-primary scale-105' : 'border-border'
+                }`}
+              >
+                {/* Popular badge */}
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold">
+                      Más Popular
+                    </div>
+                  </div>
+                )}
+
+                {/* Icon */}
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg mb-6">
+                  <IconComponent className="w-6 h-6 text-primary" />
+                </div>
+
+                {/* Header */}
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-foreground mb-2">
+                    {plan.name}
+                  </h3>
+                  <div className="flex items-baseline space-x-2 mb-3">
+                    {plan.price === "Personalizado" ? (
+                      <span className="text-3xl font-bold text-primary">{plan.price}</span>
+                    ) : (
+                      <>
+                        <span className="text-sm text-muted-foreground">$</span>
+                        <span className="text-4xl font-bold text-primary">{plan.price}</span>
+                        <span className="text-muted-foreground">{plan.period}</span>
+                      </>
+                    )}
+                  </div>
+                  <p className="text-muted-foreground text-sm">
+                    {plan.description}
+                  </p>
+                </div>
+
+                {/* Features */}
+                <div className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-start space-x-3">
+                      <Check className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground text-sm">{feature}</span>
+                    </div>
+                  ))}
+                  
+                  {plan.limitations.map((limitation, limitIndex) => (
+                    <div key={limitIndex} className="flex items-start space-x-3 opacity-50">
+                      <div className="w-4 h-4 border border-muted-foreground rounded-full mt-0.5 flex-shrink-0"></div>
+                      <span className="text-muted-foreground text-sm line-through">{limitation}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* CTA */}
+                <Button 
+                  className={`w-full ${
+                    plan.popular 
+                      ? 'bg-primary hover:bg-accent text-primary-foreground shadow-[var(--shadow-glow)]' 
+                      : 'bg-secondary hover:bg-muted text-foreground border border-border'
+                  }`}
+                >
+                  {plan.cta}
+                </Button>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Additional info */}
+        <div className="text-center mt-16 space-y-4">
+          <p className="text-muted-foreground">
+            Todos los planes incluyen migración gratuita y configuración inicial
+          </p>
+          <div className="flex justify-center space-x-8 text-sm text-muted-foreground">
+            <div className="flex items-center space-x-2">
+              <Check className="w-4 h-4 text-primary" />
+              <span>Sin contratos a largo plazo</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Check className="w-4 h-4 text-primary" />
+              <span>Cancela cuando quieras</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Check className="w-4 h-4 text-primary" />
+              <span>Actualizaciones incluidas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Pricing;
