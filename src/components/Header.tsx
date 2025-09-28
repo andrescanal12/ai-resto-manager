@@ -26,7 +26,7 @@ const Header = () => {
             </div>
             <div>
               <h1 className="text-xl font-bold text-foreground">The Manager</h1>
-              <p className="text-sm text-muted-foreground -mt-1">IA</p>
+              <p className="text-sm text-muted-foreground -mt-1">AI</p>
             </div>
           </div>
 
@@ -69,13 +69,12 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-foreground"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
-
+      
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-border">

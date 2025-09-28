@@ -8,6 +8,7 @@ const UseCasesFixed = () => {
       description:
         "Nuestro caso estrella: un agente inteligente que gestiona reservas, inventario y pedidos en tiempo real. Transformó completamente las operaciones de 'Sabores del Puerto'.",
       image: "/images/agente_sonriendo.png",
+      video: "/video_restaurant.mp4",
       stats: ["+30% eficiencia operativa", "-20% errores inventario", "24/7 disponibilidad"],
       reverse: false,
     },
@@ -27,6 +28,7 @@ const UseCasesFixed = () => {
       description:
         "Implementación de chatbot inteligente para 'RetailPlus'. Atiende consultas 24/7, procesa devoluciones y deriva casos complejos al equipo humano cuando es necesario.",
       image: "/atencion_al_cliente.png",
+      video: "/look_video_manager.mp4",
       stats: ["95% consultas resueltas", "-60% tiempo respuesta", "24/7 disponibilidad"],
       reverse: false,
     },
@@ -36,6 +38,7 @@ const UseCasesFixed = () => {
       description:
         "Transformación digital completa para 'LogisticPro': automatización de facturación, gestión de inventario y seguimiento de entregas con IA predictiva.",
       image: "/automaitixacion2.png",
+      video: "/automatizacion_procesos.mp4",
       stats: ["-70% tiempo procesos", "+99% precisión datos", "ROI 300%"],
       reverse: true,
     },
@@ -55,8 +58,11 @@ const UseCasesFixed = () => {
           {cases.map((useCase, index) => {
             const IconComponent = useCase.icon;
             const isAtencion = useCase.title === "Atención al Cliente Automatizada";
+            const isAgente = useCase.title === "Agente IA Gerente de Restaurante";
             const wrapperAspect = isAtencion
               ? "aspect-[4/3] md:aspect-[16/9]"
+              : isAgente
+              ? "aspect-[16/9] md:aspect-[21/9]"
               : "aspect-[16/9] md:aspect-[21/9]";
 
             return (
@@ -92,7 +98,7 @@ const UseCasesFixed = () => {
                       <div className={`relative w-full ${wrapperAspect} rounded-xl overflow-hidden mx-auto`}>
                         <video
                           src={useCase.video}
-                          className="w-full h-full object-cover select-none"
+                          className={`w-full h-full object-cover ${isAgente ? "object-left md:object-center" : "object-center"} select-none`}
                           autoPlay
                           muted
                           loop

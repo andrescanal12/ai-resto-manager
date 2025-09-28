@@ -10,12 +10,12 @@ const Footer = () => {
           {/* Company info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-                <span className="text-xl font-bold text-primary-foreground">AI</span>
+              <div className="w-10 h-10 rounded-lg overflow-hidden">
+                <img src="/logo.jpg" alt="The Manager AI" className="w-full h-full object-cover" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-foreground">AI Restaurant</h1>
-                <p className="text-sm text-muted-foreground -mt-1">Manager</p>
+                <h1 className="text-xl font-bold text-foreground">The Maneger</h1>
+                <p className="text-sm text-muted-foreground -mt-1">AI</p>
               </div>
             </div>
             <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -43,10 +43,10 @@ const Footer = () => {
               {[
                 { name: "Inicio", href: "#inicio" },
                 { name: "Cómo Funciona", href: "#como-funciona" },
-                { name: "Beneficios", href: "#beneficios" },
-                { name: "Casos de Uso", href: "#casos-uso" },
+                { name: "Beneficios", href: "#servicios" },
+                { name: "Casos de Uso", href: "#casos-exito" },
                 { name: "Testimonios", href: "#testimonios" },
-                { name: "Precios", href: "#precios" }
+                { name: "Precios", href: "#planes" }
               ].map((link) => (
                 <li key={link.name}>
                   <a
@@ -94,8 +94,8 @@ const Footer = () => {
                 </div>
                 <div>
                   <div className="text-sm text-muted-foreground">Email</div>
-                  <a href="mailto:hola@airestaurantmanager.com" className="text-foreground hover:text-primary">
-                    hola@airestaurantmanager.com
+                  <a href="mailto:contacto@themanagerai.es" className="text-foreground hover:text-primary">
+                    contacto@themanagerai.es
                   </a>
                 </div>
               </div>
@@ -106,8 +106,8 @@ const Footer = () => {
                 </div>
                 <div>
                   <div className="text-sm text-muted-foreground">Teléfono</div>
-                  <a href="tel:+1234567890" className="text-foreground hover:text-primary">
-                    +1 (234) 567-8900
+                  <a href="tel:+34631820884" className="text-foreground hover:text-primary">
+                    631 820 884
                   </a>
                 </div>
               </div>
@@ -118,9 +118,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <div className="text-sm text-muted-foreground">Oficina</div>
-                  <div className="text-foreground">
-                    Miami, FL, Estados Unidos
-                  </div>
+                  <div className="text-foreground">Alicante</div>
                 </div>
               </div>
             </div>
@@ -128,7 +126,7 @@ const Footer = () => {
             {/* WhatsApp button */}
             <div className="mt-6">
               <a
-                href="https://wa.me/1234567890"
+                href="https://wa.me/34631820884"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 bg-[#25D366] hover:bg-[#20BA5A] text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300"
